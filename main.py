@@ -8,17 +8,24 @@ assert sys.version_info >= version, "This script requires at least Python {0}.{1
 logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-def render():
-        '''Display the current location'''
+def render(game,current):
+        '''Display the current room, moves, and points'''
+        r = game['rooms']
+        c = r[current]
         return True
+        print('\n\nYou are in the {name}'.format(name=c['name']))
+        print(c['desc'])
 
-def update():
+def update(selection,game,current):
     '''Update our location, if possible, etc. '''
+    for e in game['rooms'][current]['exits']:
+        if e['verb'] == response:
+            current = e['target']
     return True
 
 def check_input():
-    '''get user input'''
-    response = input('What would you like to do? ')
+    '''Asks the user for input'''
+    response = input('\nWhat would you like to do? ').strip().upper()
     return response
 
 def main():
@@ -28,14 +35,18 @@ def main():
     # Your game goes here!
 
     current = 'WHOUS'
+
 quit = False
+
 while not quit:
-    #render 
-    render()
-    #check player input
-    check_input()
-    #update surroundings
-    update()
+    
+    render(game,current)
+
+    
+    selection = getInput()
+
+    
+    current = update(selection,game,current)
     return True
 
 

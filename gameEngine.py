@@ -77,10 +77,8 @@ def end_game(winning,points,moves):
 
 
 def main():
-    gameFile = 'game.json'
-
     game = {}
-    with open(gameFile) as json_file:
+    with open('game.json') as json_file:
         game = json.load(json_file)
 
     current = 'START'

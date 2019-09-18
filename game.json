@@ -1,80 +1,288 @@
+  
 {
-    "verbs": [
-      {
-        "v": "EXITS",
-        "map": "EXITS"
-      },
-      {
-        "v": "QUIT",
-        "map": "QUIT"
-      },
-      {
-        "v": "NORTH",
-        "map": "NORTH"
-      },
-      {
-        "v": "N",
-        "map": "NORTH"
-      },
-      {
-        "v": "SOUTH",
-        "map": "SOUTH"
-      },
-      {
-        "v": "S",
-        "map": "SOUTH"
-      },
-      {
-        "v": "EAST",
-        "map": "EAST"
-      },
-      {
-        "v": "E",
-        "map": "EAST"
-      },
-      {
-        "v": "WEST",
-        "map": "WEST"
-      },
-      {
-        "v": "W",
-        "map": "WEST"
-      }
-    ],
-    "rooms": {
-      "START": {
-        "name": "Starting place",
-        "desc": "This is the place to start!",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "LOC32",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "LOC2",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
-        "exits": [
-        ],
-        "inventory": []
-      }
+  "verbs": [
+    { "v": "EXITS",   "map": "EXITS" },
+    { "v": "QUIT",    "map": "QUIT"  },
+    { "v": "NORTH",   "map": "NORTH" },
+    { "v": "N",       "map": "NORTH" },
+    { "v": "SOUTH",   "map": "SOUTH" },
+    { "v": "S",       "map": "SOUTH" },
+    { "v": "EAST",    "map": "EAST"  },
+    { "v": "E",       "map": "EAST"  },
+    { "v": "WEST",    "map": "WEST"  },
+    { "v": "W",       "map": "WEST"  }
+  ],
+  "rooms": {
+    "BASEMENT": {
+      "name": "Basement",
+      "desc": "You have just hung up the phone after a thrilling conversation with Mr.Pines. He has tasked you with tracking a mythical creature detailed in various myths and tales, the legendary Mothman. Before hanging up, Mr.Pines mentioned that there had been some recent murmurs of lamps being stolen around town by a large individual with wild hair. People walking around the woods at night could hear shrieks from the sky and if they looked quickly enough they sometimes would catch a glance of giant ruby colored irises poking through the trees. Looking around the room you see that it is stocked with various items that could aid you on your quest. You grab only the essentials. You snatch a butterfly net, a flashlight, and a granola bar. The door is to the North. No time to waste! Mothman is bothering someone’s closet! Go and find him! ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "CLEARING",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "There’s only a wall covered in drawings and trap plans here!",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "You are blocked by unorganized bookshelves housing novels over the mythical and supernatural.",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "There is a door leading to Mr.Pines office. It’s always locked… Better go someplace else. ",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CLEARING": {
+      "name": "Clearing Outside the Basement",
+      "desc": "Outside of the basement is a clearing. To the East you can see the dense forest that hides many of the creatures you’ve tracked in the past. Looking West you see a path that follows a stream into a less dense part of the forest. To the North is a road that leads into town.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "TOWN",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "BASEMENT",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "STREAMPATH",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "Dense Forest",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "STREAMPATH": {
+      "name": "Path along Stream",
+      "desc": "",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "The stream blocks you from crossing to walk North. ",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "CAVE1",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "The path continues West for a bit, but soon is cut off by a logging site. The Mothman likely isn’t interested in that much noise. ",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "CLEARING",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CAVE1": {
+      "name": "Cave Entrance",
+      "desc": "The cave entrance is dark and quiet. Red berries liter the entrance, some look as if they had been nibbled on. The berries continue to trail back into the cave in a scattered trail.",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "A cold rock wall blocks you from going this way. ",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "A cold rock wall blocks you from going this way. ",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "CAVE2",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "STREAMPATH",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CAVE2": {
+      "name": "Cave End",
+      "desc": "You walk deeper into the cave, quieting your footsteps as you near the sound of rustling wings ahead. You enter a larger room in the cavern where the sound of wings echoes around you. You reach for your flashlight and aim it up towards the source of the sound. The light strikes bright ruby eyes! However, there is more than one pair of ruby colored eyes staring back at you… In fact it looks like at least 20 large bats are staring back at you with a less than pleased expression. They quickly fly into a frenzy around you, screeching angrily at you! You found the wrong set of ruby eyes! Better get outta here! ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "You better not wait around! Get out of here! ",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "You better start running! Those things leave a nasty bite! ",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "Are you walking straight into that horde of horrors? Are you crazy?! RUN ",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "CLEARING",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "TOWN": {
+      "name": "Road to Town",
+      "desc": "Walking North you can see a collection of small houses and shops lining the street. Scanning over the buildings you can spot a brightly lit building, “Light of your Life!, a lamp store. There are tall, closely knit trees and shrubs that block the path East and West of the road. ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "Lamp Store",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "CLEARING",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "Trees block this side of the road. ",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "Trees block this side of the road. ",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+
+     },
+     "LAMPSTORE": {
+      "name": "Lamp Store",
+      "desc": "You walk into the store, almost blinded by the light that greets you once inside. After a couple of blinks you glance around at the various customers, scanning for the described culprit of the recent lamp burglaries. You see the cashier to the East, playing with a lamp pull string absentmindedly. Looking North you see an elderly couple squinting at a lamp that looks a lot like Garfield the Cat. Glancing over West, you spot a tall figure in a trench coat. He is hunched over, looking at the collection of lamps. His face is mere inches away from the warm light bulbs in the lamps. You can see that he’s got two tufts of fluffy “hair” sticking up off of his head. It looks like he tried to tuck them into his hat, but his intense interest in the lamps allowed for the tufts to peek out.  ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "Elderly Couple",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "TOWN",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "Lamp Lover",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "Cashier",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+     },
+     "DENSEFOREST": {
+      "name": "Dense Forest",
+      "desc": "The foliage above blocks out much of the sunlight, allowing only slight glimpses of light here and there. Growing up the sides of the thicker oak trees are clusters of mushrooms with an iridescent tint. Looking Eastward you notice tiny footprints that weave along the path ahead. ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "The shrubs are too thick to push through here. ",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "You glance down to see some of your own mythical traps that you had placed earlier. Best not to accidentally get yourself trapped. Try another way. ",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "CLEARING",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "Gnome Tree",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "GNOMETREE": {
+      "name": "Gnome Tree",
+      "desc": "You follow the tracks for a while, their numbers increasing the longer you follow them. Without realizing it you have wandered into a clearing still shrouded in shadows because of the heavy foliage. However, this clearing is lined with piles of what looks like miscellaneous junk. There are piles of gardening tools, lawn ornaments,and some other strange collections. A glint to the North catches your eye.  ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "Gnome Trader",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "This way is blocked by a heap of tiny garden shovels. No, you cannot just step over them. You’ve got weak knees. ",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "Dense Forest",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "The tree in front of you is the largest you’ve ever seen. The dirt has huddled around it’s trunk, creating a wall of dirt with various tools stuck into the dirt. A plastic flamingo sticks out of the dirt wall, he gives you a warning glance with those faded eyes. Best to leave that be... ",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "GNOMETRADER": {
+      "name": "Gnome Trader",
+      "desc": "You head over to inspect the glint, realizing as you get closer that it is coming from within the tree. You peek into the hole and are shocked to come face to face with a garden gnome? Not a stationary one, a very alive garden gnome. He seems just as shocked to see you looking in on his hidey hole. “May I help you, nosey?”  ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": " ",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "",
+     "condition": ""
+        }
+      ],
+      "inventory": []
     }
   }
+}

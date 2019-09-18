@@ -12,12 +12,12 @@ logger = logging.getLogger(__name__)
 
 
 # Game loop functions
-def render(game,current,moves,points):
-    ''' Displays the current room, moves, and points '''
+def render(game,current,moves):
+    ''' Displays the current room, moves, and '''
     r = game['rooms']
     c = r[current]
 
-    print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
+    print('\n\nMoves: {moves}'.format(moves=moves)
     print('\n\nYou are in the {name}'.format(name=c['name']))
     print(c['desc'])
     if len(c['inventory']):
@@ -64,13 +64,13 @@ def normalizeVerb(selection,verbs):
             return v['map']
     return ""
 
-def end_game(winning,points,moves):
+def end_game(winning,moves):
     if winning:
         print('You have won! Congratulations')
-        print('You scored {points} points in {moves} moves! Nicely done!'.format(moves=moves, points=points))
+        print('You found Mothman in {moves} moves! Nicely done!'.format(moves=moves))
     else:
         print('Thanks for playing!')
-        print('You scored {points} points in {moves} moves. See you next time!'.format(moves=moves, points=points))
+        print("You didn't find Mothman in {moves} moves. See you next time!".format(moves=moves))
 
 
 
@@ -85,26 +85,25 @@ def main():
     win = ['END']
     lose = []
     moves = 0
-    points = 0
     inventory = []
 
     while True:
 
-        render(game,current,moves,points)
+        render(game,current,moves)
 
         selection = getInput(game,current,game['verbs'])
 
         if selection[0] == 'QUIT':
-            end_game(False,points,moves)
+            end_game(False,moves)
             break
 
         current = update(selection,game,current,inventory)
 
         if current in win:
-            end_game(True,points,moves)
+            end_game(True,moves)
             break
         if current in lose:
-            end_game(False,points,moves)
+            end_game(False,moves)
             break
 
         moves += 1

@@ -154,7 +154,7 @@
       "exits": [
         {
           "verb": "NORTH",
-          "target": "Lamp Store",
+          "target": "LAMPSTORE",
           "condition": ""
         },
         {
@@ -182,7 +182,7 @@
       "exits": [
         {
           "verb": "NORTH",
-          "target": "Elderly Couple",
+          "target": "ELDERS",
           "condition": ""
         },
         {
@@ -192,12 +192,12 @@
         },
         {
           "verb": "WEST",
-          "target": "Lamp Lover",
+          "target": "LAMPLOVER",
           "condition": ""
         },
         {
           "verb": "EAST",
-          "target": "Cashier",
+          "target": "The cashier seems completely uninterested in any sort of interaction. Her shift is probably over soon and she has already checked out mentally. ",
           "condition": ""
         }
       ],
@@ -224,7 +224,7 @@
         },
         {
           "verb": "EAST",
-          "target": "Gnome Tree",
+          "target": "GNOMETREE",
           "condition": ""
         }
       ],
@@ -236,7 +236,7 @@
       "exits": [
         {
           "verb": "NORTH",
-          "target": "Gnome Trader",
+          "target": "GNOMETRADER",
           "condition": ""
         },
         {
@@ -246,7 +246,7 @@
         },
         {
           "verb": "WEST",
-          "target": "Dense Forest",
+          "target": "DENSEFOREST",
           "condition": ""
         },
         {
@@ -259,26 +259,26 @@
     },
     "GNOMETRADER": {
       "name": "Gnome Trader",
-      "desc": "You head over to inspect the glint, realizing as you get closer that it is coming from within the tree. You peek into the hole and are shocked to come face to face with a garden gnome? Not a stationary one, a very alive garden gnome. He seems just as shocked to see you looking in on his hidey hole. “May I help you, nosey?”  ",
+      "desc": "You head over to inspect the glint, realizing as you get closer that it is coming from within the tree. You peek into the hole and are shocked to come face to face with a garden gnome? Not a stationary one, a very alive garden gnome. He seems just as shocked to see you looking in on his hidey hole. He asks, 'May I help you, nosey?'. You stare back in disbelief for a moment before recalling your mission, find Mothaman. You ask the animated garden ornament if he has any clue where the Mothman might be hanging out. Before answering you he squints at you and shrugs, 'I might know where he relaxes... However, this isn't free information. Do ya' have anything that might interest me?'. You give the gnome a strange look, but decicde to rummage through your bag anyways. Maybe gnomes like granola bars? You decide to try it and his eyes light up a bit at the sight of the wrapped bar. He's eager to reach out for it, but you are sure to demand an answer before feeding the creature. 'Fine, fine. Mothman loves to lighten his daily life up with trips out of the forest. He always comes back with strange souveniers.', the gnome finishes this vague statement with a 100-watt smile, ending the conversation. Where are you headed now? ",
       "exits": [
         {
           "verb": "NORTH",
-          "target": " ",
+          "target": "There is nothing but dense forest for miles this way. ",
           "condition": ""
         },
         {
           "verb": "SOUTH",
-          "target": "",
+          "target": "GNOMETREE",
           "condition": ""
         },
         {
           "verb": "WEST",
-          "target": "",
+          "target": "The gnome seems to have set up a fence to keep people out of his hoarded stashes. ",
           "condition": ""
         },
         {
           "verb": "EAST",
-          "target": "",
+          "target": "This way is blocked by some mangled tomatoe plants and something else that looks to be barely survivng. For a garden decoration, this guy sure sucks at gardening. ",
      "condition": ""
         }
       ],

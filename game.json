@@ -306,7 +306,7 @@
         {
           "verb": "EAST",
           "target": "You found him! Who knew that Mothman liked to wander around town in search for lamps to brighten up his house somewhere in the forest? ",
-     "condition": ""
+          "condition": ""
         }
       ],
       "inventory": []

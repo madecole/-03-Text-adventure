@@ -61,7 +61,7 @@
         },
         {
           "verb": "EAST",
-          "target": "Dense Forest",
+          "target": "DENSEFOREST",
      "condition": ""
         }
       ],

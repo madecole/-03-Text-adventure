@@ -17,7 +17,7 @@ def render(game,current,moves):
     r = game['rooms']
     c = r[current]
 
-    print('\n\nMoves: {moves}'.format(moves=moves)
+    print('\n\nMoves: {moves}'.format(moves=moves))
     print('\n\nYou are in the {name}'.format(name=c['name']))
     print(c['desc'])
     if len(c['inventory']):
@@ -47,7 +47,11 @@ def update(selection,game,current,inventory):
     else:
         for e in game['rooms'][current]['exits']:
             if s == e['verb'] and e['target'] != 'NoExit':
-                return e['target']
+                if e['target'] in game['rooms']:
+                    return e['target']
+                else:
+                    print('\n\n' + e['target'])
+
     print("\nYou can't go that way!")
     return current
 
@@ -81,7 +85,7 @@ def main():
     with open('game.json') as json_file:
         game = json.load(json_file)
 
-    current = 'START'
+    current = 'BASEMENT'
     win = ['END']
     lose = []
     moves = 0

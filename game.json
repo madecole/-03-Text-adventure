@@ -69,7 +69,7 @@
     },
     "STREAMPATH": {
       "name": "Path along Stream",
-      "desc": "",
+      "desc": "There is a travelled path that parallels the stream running through the forest. There are red berries growing along the path and it looks like some of the bushes have been picked clean, splatters of juice trailing to the south.",
       "exits": [
         {
           "verb": "NORTH",
@@ -182,7 +182,7 @@
       "exits": [
         {
           "verb": "NORTH",
-          "target": "ELDERS",
+          "target": "The elderly couple ",
           "condition": ""
         },
         {
@@ -279,6 +279,33 @@
         {
           "verb": "EAST",
           "target": "This way is blocked by some mangled tomatoe plants and something else that looks to be barely survivng. For a garden decoration, this guy sure sucks at gardening. ",
+     "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "LAMPLOVER": {
+      "name": "Lamp Lover",
+      "desc": "You approach the large man and hesitate a moment before gently tapping his arm. He bolts upright with the sound of rustling fur underneah his coat. He turns to you, meeting your gaze with huge ruby colored eyes. They squint together as if he is smiling at you even without seeing his mouth (if he's got one). He makes some sort of squeaking noise at you and you suddenly remember that you need to get a picture of this adorable creature. You explain your quest to discover the supernatural secrets of this town and mention that you haven't crossed paths with him yet. You ask if you can document his existence with a picture and he glances around, noticing that the other people in the shop are completely oblivious. He takes his hat off, letting his moth tufts pop up and he leans down to pose for a picture with you. You thank him and hurry back to the basement to develop the film before Mr.Pines gets back. Great job on finding Mothman! Bigger adventures are sure to come! ",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "You found him! He seems very sweet and approachable once you get past those giant eyes.",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "LAMPSTORE",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "You found the lamp thief who was actually the Mothman! (not surprising after looking over the facts of the case) ",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "You found him! Who knew that Mothman liked to wander around town in search for lamps to brighten up his house somewhere in the forest? ",
      "condition": ""
         }
       ],
